@@ -32,8 +32,17 @@ nav{
 label:not(:last-child){
   margin-right: 1rem;
 }
-[type="radio"].with-gap:checked+span:after {
+ /* [type="radio"].with-gap:checked+span:after { 
   background-color: #FFA500 !important;
-}
+}*/
 
+[type="radio"].with-gap:checked + span:before,
+[type="radio"].with-gap:checked + span:after {
+  border: 2px solid #ffb300;
+}
+ 
+
+[type="radio"].with-gap:checked + span:after {
+  background-color: #ffb300;
+}
 
