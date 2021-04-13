@@ -1,5 +1,5 @@
 
-const Pleloader = () => {
+const Preloader = () => {
   return (
     <div className ="circle-position">
     <div className="preloader-wrapper active">
@@ -16,4 +16,4 @@ const Pleloader = () => {
   </div>
   );
 };
-export default Pleloader;
+export default Preloader;
