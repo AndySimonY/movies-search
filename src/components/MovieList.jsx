@@ -1,7 +1,7 @@
 import Movie from "./Movie"
 
 const MovieList = (props) => {
-    const {movies} = props
+    const {movies = []} = props
     return (
 <div className="movies">
 {

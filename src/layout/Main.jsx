@@ -12,7 +12,7 @@ function Main() {
     const searchMovies = (str, type = 'all') => {
         setLoading(true);
         fetch(
-            `https://www.ocom/?amdbapi.pikey=${API_KEY}&s=${str}${
+            `https://www.omdbapi.com/?apikey=${API_KEY}&s=${str}${
                 type !== 'all' ? `&type=${type}` : ''
             }`
         )
@@ -28,7 +28,9 @@ function Main() {
     };
 
     useEffect(() => {
-        fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=matrix`)
+        fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=all`
+        
+        )
             .then((response) => response.json())
             .then((data) => {
                 setMovies(data.Search);
@@ -43,7 +45,7 @@ function Main() {
     return (
         <main className='container content'>
             <Search searchMovies={searchMovies} />
-            {loading ? <Preloader/>: <MovieList movies={movies} />}
+            {loading ? <Preloader/>: <MovieList movies={movies}/>}
         </main>
     );
 }
